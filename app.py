@@ -32,17 +32,17 @@ def match_salesperson_codes(operator_name, master_list, threshold=90):
 
 # Streamlit App
 def main():
-    st.title("📂 Vessel Data Processing App")
+    st.title("🐐 Mapping Shortcut - LKA")
 
     # File upload for Vessel Data
     uploaded_vessel = st.file_uploader("Upload Vessel Data File (Excel)", type=["xlsx"])
 
     # File upload for Master List
-    uploaded_master = st.file_uploader("Upload Master List File (Excel)", type=["xlsx"])
+    uploaded_master = st.file_uploader("Upload Master List File (Excel)- Database only ", type=["xlsx"])
 
     # Process data when files are uploaded
     if uploaded_vessel and uploaded_master:
-        st.success("✅ Files uploaded successfully. Processing now...")
+        st.success("✅ Uploaded liao. wait pls...")
 
         # Load Vessel Data
         df = pd.read_excel(uploaded_vessel, sheet_name="report")
@@ -103,7 +103,7 @@ def main():
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
 
-        st.success("✅ Processing complete! Download your file above.")
+        st.success("✅ ok liao! Download your file above.")
 
 if __name__ == "__main__":
     main()
